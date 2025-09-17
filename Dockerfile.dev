@@ -1,0 +1,25 @@
+FROM node:24-alpine
+RUN npm install --global corepack@latest \
+    && corepack enable pnpm \
+    && corepack prepare pnpm@latest-10
+
+RUN addgroup app && adduser -S -G app app
+USER app
+
+# Make project directory
+WORKDIR /app
+
+# Copy project packages/dependencies
+COPY package*.json ./
+
+# Install dependencies
+RUN pnpm install
+
+# Copy source code in app directory
+COPY . .
+
+EXPOSE 5173
+CMD ["pnpm", "dev"]
+
+
+
