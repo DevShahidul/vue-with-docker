@@ -100,7 +100,7 @@ Use the following command to start the dev container with live code updates:
 docker run -d -p 5173:5173 --name lrc -v $(pwd):/usr/local/app -v /usr/local/app/node_modules myapp-dev 
 ```
 
-##### 🔍 Explanation:
+##### 🔍 Explanation the command:
 - 🧱 docker run -d → Runs the container in the background (detached mode).
 - 🌐 -p 5173:5173 → Maps port 5173 inside the container to port 5173 on your local machine (e.g., for Vite dev server).
 - 🏷️ --name lrc → Assigns the container a custom name (lrc) for easy reference.
