@@ -101,12 +101,12 @@ docker run -d -p 5173:5173 --name lrc -v $(pwd):/usr/local/app -v /usr/local/app
 ```
 
 ##### 🔍 Explanation:
-🧱 docker run -d → Runs the container in the background (detached mode).
-🌐 -p 5173:5173 → Maps port 5173 inside the container to port 5173 on your local machine (e.g., for Vite dev server).
-🏷️ --name lrc → Assigns the container a custom name (lrc) for easy reference.
-💻 -v $(pwd):/usr/local/app → Mounts your local project folder to the container so any file changes update instantly (live reload).
-📦 -v /usr/local/app/node_modules → Keeps container’s own node_modules intact, avoiding host–container dependency issues.
-🚀 myapp-dev → The image to run, built from your Dockerfile.dev for development mode.
+- 🧱 docker run -d → Runs the container in the background (detached mode).
+- 🌐 -p 5173:5173 → Maps port 5173 inside the container to port 5173 on your local machine (e.g., for Vite dev server).
+- 🏷️ --name lrc → Assigns the container a custom name (lrc) for easy reference.
+- 💻 -v $(pwd):/usr/local/app → Mounts your local project folder to the container so any file changes update instantly (live reload).
+- 📦 -v /usr/local/app/node_modules → Keeps container’s own node_modules intact, avoiding host–container dependency issues.
+- 🚀 myapp-dev → The image to run, built from your Dockerfile.dev for development mode.
 
 ## 📁 Project Structure
 
